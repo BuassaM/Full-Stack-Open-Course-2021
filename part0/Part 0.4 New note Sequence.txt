@@ -1,0 +1,58 @@
+title Part 0.4 New note Sequence
+
+
+note over Browser: 
+The user Types a text, 
+After that the user clicks 
+ Save button
+End note
+
+Browser->Server: HTTP https://fullstack-exampleapp.herokuapp.com/notes
+
+note over Server:
+Server Gets the data hereafter 
+veer request back to the browser
+End note
+
+Server->Browser: Response: Staus Code 302 redirects to /notes
+ 
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+
+Server->Browser: HTML Code/ Response: Notes.HTML
+
+note over Browser: 
+Page reloads
+The browser reads the HTML Code
+end note 
+
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+
+Server->Browser: Main.CSS/ Response
+
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+
+Server->Browser: Main.JS/ Response
+
+Note over Browser:
+Browser Starts Processing 
+all the Updated HTML code.
+Browser starts processing 
+Main.js, requesting Update
+from the server for all the
+JSON Data.
+End note
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+
+Server->Browser: [{ content: "3 Reasons why I am Awesome", date: "2021-07-07 ETA" }, ...]
+
+note over Browser:
+Browser performs Event after 
+JSON Data sucessfully
+ReadyStateFunction runs Main.js
+which runs Main. displaying
+all the content/ List notes
+on a random format.
+
+
+
+

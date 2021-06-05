@@ -1,0 +1,38 @@
+title Part 0.5 Single Page App Sequence
+
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+
+Server->Browser: HTML Code/ Response
+
+Note over Server:
+Server Reads  
+HTML Code
+End note
+
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+
+Server->Browser: Main.CSS/ Response
+
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+
+Server->Browser: Spa.JS/ Response
+
+Note over Browser:
+Browser runs 
+Javascript Files
+Request Js then 
+Json Data from the 
+server
+End Note
+
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+
+Server->Browser: [{ content: "WHY We Should Help everybody", date: "2021-07-07" }, ...]
+
+Note over Browser:
+rowser performs Event after 
+JSON Data sucessfully
+ReadyStateFunction runs SPA.js
+which runs Main. displaying
+all the content/ List notes
+on a random format.

@@ -1,0 +1,26 @@
+title Part 0.6 Single Page App sequence New note 
+
+note over Browser:
+
+User Types Text
+Clicks Save Button
+End note 
+
+Note over Browser:
+Browser Update List
+Prevent.Default quicks in
+Page Updates using
+ReDrawNotes Function
+End note
+
+Note over Server: 
+Server Get Request Data
+SendToServer after PQST
+Returns New files as Json Files 
+End Note 
+
+Browser->Server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+Server->Browser: 201 Created, {content: "This Message was created Purely", date: "2021-07-07"}
+
+
